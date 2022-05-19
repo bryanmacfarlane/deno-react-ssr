@@ -5,5 +5,5 @@ Basic example of Deno + React SSR
 # run
 
 ```bash
-make
+make run
 ```
