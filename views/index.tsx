@@ -1,9 +1,4 @@
-// var React = require('react');
-// var DefaultLayout = require('./layouts/default');
 import { React } from "../deps.ts";
-// import Counter from "./components/Counter.tsx";
-// import GHBadge from "./components/GHBadge.tsx";
-// import "./react-shim.ts";
 import { DefaultLayout } from "./layouts/default.tsx"
 import { DefaultProps } from "./layouts/default.tsx"
 
