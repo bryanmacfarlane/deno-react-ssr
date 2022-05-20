@@ -3,6 +3,7 @@ import { Router } from './deps.ts'
 import { renderToString } from './deps.ts';
 import { React } from "./deps.ts";
 import {IndexView, IndexProps} from "./views/index.tsx"
+import {render} from "./ssr.tsx"
 
 const ux = new Router()
     .get("/", (ctx) => {
@@ -11,9 +12,10 @@ const ux = new Router()
             title: "foo"
         }
         const el=React.createElement(IndexView, props)
-        
-        const body=renderToString(el)      
-        ctx.response.body = body
+        const content = renderToString(el)
+        const html=render(content)
+
+        ctx.response.body = html 
     });
 
 export { ux }

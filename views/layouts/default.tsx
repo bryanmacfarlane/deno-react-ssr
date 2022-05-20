@@ -1,4 +1,5 @@
 import { React } from "../../deps.ts";
+import { Nav } from "./nav.tsx"
 
 export interface DefaultProps {
     title: string,
@@ -6,15 +7,10 @@ export interface DefaultProps {
 }
 
 export function DefaultLayout(props: DefaultProps) {
-  return (
-    <html>
-      <head>
-          <meta charSet="utf-8"/>
-          <meta name="viewport" content="width=device-width, initial-scale=1"/>
-          <title>{props.title}</title>
-          <link rel="stylesheet" href="css/styles.css"/>
-      </head> 
-      <body>{props.children}</body>
-    </html>
-  );
-}
+    return (
+      <div>
+        <Nav/>
+        <div>{props.children}</div>
+      </div>
+    );
+  }

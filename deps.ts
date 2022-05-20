@@ -37,13 +37,33 @@ export {
     renderToString
 }
 
+export * as twind from "https://esm.sh/twind@0.16.16?target=deno"
 // export { default as serialize } from "https://esm.sh/serialize-javascript@6.0.0?target=deno&pin=v59";
 
 // import typography from "https://esm.sh/@twind/typography@0.0.2?target=deno&pin=v61&no-check";
 // export { typography };
 
+import { setup, tw } from "https://esm.sh/twind@0.16.16";
+export { setup, tw }
+import { getStyleTag, virtualSheet } from "https://esm.sh/twind@0.16.16/sheets";
+
+export {
+  getStyleTag,
+  virtualSheet,
+} 
+export type { VirtualSheet } from "https://esm.sh/twind@0.16.16/sheets?target=deno";
+
+//
+// tailwindui dependencies
+//
 // export {
-//   getStyleTag,
-//   virtualSheet,
-// } from "https://esm.sh/twind@0.16.16/sheets?target=deno&pin=v61";
-// export type { VirtualSheet } from "https://esm.sh/twind@0.16.16/sheets?target=deno&pin=v61";
+//   Disclosure,
+//   Menu,
+//   Transition,
+// } from "https://esm.sh/@headlessui/react@1.4.2?target=deno&deps=react@17.0.2,react-dom@17.0.2";
+
+// export {
+//   BellIcon,
+//   MenuIcon,
+//   XIcon,
+// } from "https://esm.sh/@heroicons/react@1.0.5/outline?target=deno";
