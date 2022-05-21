@@ -4,6 +4,9 @@ install:
 run:
 	deno run -A ${DENO_ARGS} main.ts
 
+dev:
+	deno run -A ${DENO_ARGS} --watch main.ts
+
 fmt:
 	deno fmt --config=deno.json
 fmt-watch:

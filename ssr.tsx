@@ -1,5 +1,6 @@
 import { getStyleTag, virtualSheet, twind, renderToString, React, setup } from "./deps.ts";
 
+// https://twind.dev/usage-guides/react.html#server-side-rendering
 const sheet = virtualSheet();
 
 setup({
