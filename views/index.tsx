@@ -5,7 +5,7 @@ import { React } from "../deps.ts";
 import { DefaultLayout } from "./layouts/default.tsx"
 import { DefaultProps } from "./layouts/default.tsx"
 import { tw } from "../deps.ts"
-import { Hero } from "./hero.tsx"
+import { Hero } from "./components/hero.tsx"
 
 export interface IndexProps extends DefaultProps {
   name: string
@@ -14,14 +14,15 @@ export interface IndexProps extends DefaultProps {
 export function IndexView(props: IndexProps) {
   return (
     <DefaultLayout title={props.title}>
-        <Hero/>
-        <div className="py-20" style={{background: 'linear-gradient(90deg, #667eea 0%, #764ba2 100%)'}}>
-          <div className="container bg-black mx-auto px-6">
-            <p className="subtitle" id="subtitle">
-              Hello {props.name}
-            </p>
-          </div>
-        </div> 
+
+        <Hero title="Deno SSR + React + Twind Sample" 
+              subtitle="Composable React using Tailwind via Twind"/>
+        
+        <div className={tw`container bg-white mx-auto p-5`}>
+          <p className={tw`subtitle`} id="subtitle">
+            Body ... {props.name}
+          </p>
+        </div>
         {/* <script src="bundle.js"></script> */}
     </DefaultLayout>
   );

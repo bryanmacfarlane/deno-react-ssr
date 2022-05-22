@@ -1,10 +1,10 @@
 // /** @jsx React.createElement */
 // /** @jsxFrag React.Fragment */
 
-import { React } from "../deps.ts";
-import { DefaultLayout } from "./layouts/default.tsx"
-import { DefaultProps } from "./layouts/default.tsx"
-import { tw } from "../deps.ts"
+import { React } from "../../deps.ts";
+import { DefaultLayout } from "../layouts/default.tsx"
+import { DefaultProps } from "../layouts/default.tsx"
+import { tw } from "../../deps.ts"
 import { Hero } from "./hero.tsx"
 
 export interface IndexProps extends DefaultProps {
