@@ -19,8 +19,8 @@ export function IndexView(props: IndexProps) {
               subtitle="Composable React using Tailwind via Twind"/>
         
         <div className={tw`container bg-white mx-auto p-5`}>
-          <p className={tw`subtitle`} id="subtitle">
-            Body ... {props.name}
+          <p id="subtitle">
+            Hello {props.name}!
           </p>
         </div>
         {/* <script src="bundle.js"></script> */}
